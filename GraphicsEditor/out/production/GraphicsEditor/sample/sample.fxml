@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Canvas fx:id="CanvasD" height="400.0" layoutX="151.0" layoutY="4.0" onMouseClicked="#print" onMouseDragged="#print" onMouseReleased="#obrezanie" width="808.0" />
+      <FlowPane layoutX="14.0" layoutY="24.0" prefHeight="84.0" prefWidth="140.0">
+         <children>
+            <ColorPicker fx:id="colorP" onMouseClicked="#canvaClicked" />
+            <Label text="Выберите размер" />
+            <Slider fx:id="sliders" />
+         </children></FlowPane>
+      <VBox layoutX="14.0" layoutY="141.0" prefHeight="224.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Button fx:id="lineS" mnemonicParsing="false" onAction="#lineSClicked" text="Кисть" />
+            <Button fx:id="lastick" mnemonicParsing="false" onAction="#m_lastick" onMouseDragged="#m_lastick" text="Ластик" />
+            <Button fx:id="loadM" mnemonicParsing="false" onAction="#loadM" text="Загрузить" />
+            <Button mnemonicParsing="false" onAction="#saveM" text="Сохранить" />
+            <Button mnemonicParsing="false" onAction="#clear" text="Очистить" />
+            <Button mnemonicParsing="false" onAction="#Mupdate" text="Обновить" />
+            <Button fx:id="obrezatM" mnemonicParsing="false" onAction="#obrezat" text="Обрезать" visible="false" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</Pane>
